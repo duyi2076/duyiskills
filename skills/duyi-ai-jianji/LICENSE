@@ -1,0 +1,65 @@
+duyi-ai-jianji License Notice
+
+Copyright (c) 2026 杜一 (GitHub: @duyi2076).
+All rights reserved except as expressly licensed below.
+
+1. Software code
+
+The following original files are licensed under the PolyForm Noncommercial
+License 1.0.0, reproduced in
+`LICENSES/PolyForm-Noncommercial-1.0.0.txt`:
+
+- `scripts/**/*.py`
+- `tests/**/*.py`
+- `assets/composition/semantic-stage/build.py`
+- `requirements.txt`
+
+Noncommercial use, modification, and distribution are permitted only under
+that license. Commercial use requires a separate written license from 杜一.
+
+2. Skill content, documentation, and original design assets
+
+The following original materials are licensed under Creative Commons
+Attribution-NonCommercial 4.0 International (CC BY-NC 4.0), reproduced in
+`LICENSES/CC-BY-NC-4.0.txt`:
+
+- `SKILL.md` and `README.md`
+- `agents/**` and `references/**`
+- Original Markdown, JSON, and other non-code design materials under
+  `assets/composition/**`
+
+Noncommercial sharing and adaptation are permitted only with attribution and
+an indication of changes. Commercial use requires separate written permission.
+
+3. Third-party materials
+
+Third-party materials are excluded from the licenses above and remain under
+their own terms, including:
+
+- Font files and corresponding `OFL-*.txt` or `OFL-1.1.txt` license files.
+- `assets/composition/semantic-stage/vendor/gsap.min.js`, which retains the
+  GreenSock copyright and license notice embedded in the file.
+- `assets/vad/silero_vad.onnx`, `assets/vad/model.json`, and
+  `assets/vad/LICENSE.silero-vad`, which remain under the Silero VAD MIT
+  License.
+
+If a file contains its own copyright or license notice, that notice controls
+for that file.
+
+4. Attribution and official status
+
+Redistributed or adapted copies must retain the notices required by
+`NOTICE.md`, identify material changes, and link to the original project:
+
+https://github.com/duyi2076/duyi-scripted-video-edit
+
+No trademark, publicity, or endorsement rights are granted.
+
+5. Commercial licensing
+
+For commercial licensing, contact the author through the official repository:
+
+https://github.com/duyi2076/duyi-scripted-video-edit/issues
+
+This file defines which license applies to each part of the repository. The
+full referenced license text controls the rights and obligations for that part.

@@ -1,0 +1,155 @@
+{
+  "schema_version": 3,
+  "default_size": "medium",
+  "fidelity_policy": {
+    "mode": "spoken-first",
+    "priority": [
+      "spoken-expression",
+      "spoken-order-and-emphasis",
+      "viewer-comprehension",
+      "formal-logical-neatness"
+    ],
+    "rewrite_for_formal_symmetry_forbidden": true,
+    "heterogeneous_narrative_nodes_allowed": true
+  },
+  "sizes": {
+    "small": {
+      "reference_width": 373,
+      "template_width": 746,
+      "canvas_ratio": 0.29140625,
+      "maximum_text_weight": 28
+    },
+    "medium": {
+      "reference_width": 427,
+      "template_width": 854,
+      "canvas_ratio": 0.33359375,
+      "maximum_text_weight": 72
+    }
+  },
+  "maximum_card_width": {
+    "size": "medium",
+    "reference_width": 427,
+    "template_width": 854,
+    "canvas_ratio": 0.33359375
+  },
+  "vertical_layout": {
+    "model": "measured-content-height-reflow-v1",
+    "stage_height_budget": 690,
+    "layer_gap": 24,
+    "minimum_layer_gap": 16,
+    "height_policy": "content-driven",
+    "browser_measurement_authoritative": true,
+    "overflow_policy": "automatic-ai-reflow-before-render",
+    "maximum_reflow_attempts": 3
+  },
+  "type_layout_compatibility": {
+    "thesis": ["single-point"],
+    "quote": ["quote"],
+    "chat": ["chat"],
+    "comparison": ["comparison"],
+    "formula": ["formula"],
+    "progressive-list": ["vertical-list"],
+    "path": ["vertical-list"],
+    "relation": [
+      "narrative-path",
+      "spoken-cause",
+      "parallel",
+      "comparison",
+      "hierarchy",
+      "multi-item"
+    ]
+  },
+  "content_structures": [
+    "short-single",
+    "core-idea",
+    "horizontal-relation",
+    "parallel-row",
+    "comparison-row",
+    "hierarchy",
+    "balanced-grid",
+    "vertical-list",
+    "quote",
+    "chat"
+  ],
+  "relation_layouts": {
+    "single-point": {
+      "allowed_sizes": ["small", "medium"],
+      "minimum_items": 0,
+      "maximum_items": 1
+    },
+    "narrative-path": {
+      "allowed_sizes": ["medium"],
+      "minimum_items": 2,
+      "maximum_items": 4,
+      "distribution": "natural-nodes-elastic-connectors",
+      "connector_policy": "per-target-item",
+      "connector_reveal": "with-target-node",
+      "connector_entry_seconds": 0.22
+    },
+    "spoken-cause": {
+      "allowed_sizes": ["medium"],
+      "minimum_items": 2,
+      "maximum_items": 4,
+      "distribution": "natural-nodes-elastic-connectors",
+      "connector_policy": "per-target-item",
+      "connector_reveal": "with-target-node",
+      "connector_entry_seconds": 0.22
+    },
+    "parallel": {
+      "allowed_sizes": ["medium"],
+      "minimum_items": 2,
+      "maximum_items": 4,
+      "distribution": "equal-columns"
+    },
+    "comparison": {
+      "allowed_sizes": ["medium"],
+      "minimum_items": 2,
+      "maximum_items": 2,
+      "distribution": "equal-columns"
+    },
+    "hierarchy": {
+      "allowed_sizes": ["medium"],
+      "minimum_items": 2,
+      "maximum_items": 4,
+      "distribution": "one-parent-equal-children"
+    },
+    "formula": {
+      "allowed_sizes": ["medium"],
+      "minimum_items": 2,
+      "maximum_items": 7,
+      "distribution": "natural-terms-elastic-operators"
+    },
+    "multi-item": {
+      "allowed_sizes": ["medium"],
+      "minimum_items": 5,
+      "maximum_items": 12,
+      "maximum_text_weight": 112,
+      "distribution": "equal-cells-balanced-rows",
+      "rows": {
+        "5": [3, 2],
+        "6": [3, 3],
+        "7": [4, 3],
+        "8": [4, 4],
+        "9": [4, 4, 1],
+        "10": [4, 4, 2],
+        "11": [4, 4, 3],
+        "12": [4, 4, 4]
+      }
+    },
+    "vertical-list": {
+      "allowed_sizes": ["small", "medium"],
+      "minimum_items": 1,
+      "maximum_items": 4
+    },
+    "quote": {
+      "allowed_sizes": ["small", "medium"],
+      "minimum_items": 0,
+      "maximum_items": 0
+    },
+    "chat": {
+      "allowed_sizes": ["small", "medium"],
+      "minimum_items": 0,
+      "maximum_items": 4
+    }
+  }
+}

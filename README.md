@@ -8,6 +8,7 @@
 |---|---|---|
 | [duyi-gzhpanban](skills/duyi-gzhpanban/SKILL.md) | 将已写好的公众号文章排成手机可读的 HTML，提供 15 套样式、重点与配图；默认交付复制稿，明确要求时上传草稿箱 | [README](skills/duyi-gzhpanban/README.md) |
 | [杜一抖音拆解（duyi-douyin-chaijie）](skills/duyi-douyin-chaijie/SKILL.md) | 将公开抖音视频整理为可回查的页面、转写和关键帧证据，拆解开篇、论证、营销与评论，输出 Markdown 和 HTML 报告 | [README](skills/duyi-douyin-chaijie/README.md) |
+| [杜一 AI 剪辑（duyi-ai-jianji）](skills/duyi-ai-jianji/SKILL.md) | 将中文横屏口播经一次文字确认后精剪，生成原话字幕、固定左上语义动画和可复查成片；默认深色，可明确选择白墙融合 | [README](skills/duyi-ai-jianji/README.md) |
 
 ## 获取与安装
 
@@ -43,6 +44,18 @@ skills/
     NOTICE.md
     SECURITY.md
     THIRD_PARTY_NOTICES.md
+  duyi-ai-jianji/
+    README.md
+    SKILL.md
+    requirements.txt
+    scripts/
+    references/
+    assets/
+    tests/
+    LICENSES/
+    LICENSE
+    NOTICE.md
+    THIRD_PARTY_NOTICES.md
 ```
 
 ## 收录与更新
@@ -56,3 +69,5 @@ skills/
 各 Skill 和第三方组件按自己的许可执行。查看对应目录的许可文件和第三方说明；本仓库没有统一的 MIT 声明。公众号 Skill 的 15 套样式包含 CC BY-NC 4.0 的非商业用途限制，范围见[许可说明](skills/duyi-gzhpanban/THIRD_PARTY_NOTICES.md)。
 
 杜一抖音拆解采用 CC BY-NC 4.0，署名、非商业用途和第三方依赖范围见[许可与来源说明](skills/duyi-douyin-chaijie/NOTICE.md)。
+
+杜一 AI 剪辑的原创代码采用 PolyForm Noncommercial 1.0.0，文档和设计材料采用 CC BY-NC 4.0；字体、GSAP 与 Silero 模型保留各自许可，见[许可与第三方说明](skills/duyi-ai-jianji/THIRD_PARTY_NOTICES.md)。

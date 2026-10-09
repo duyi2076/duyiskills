@@ -1,0 +1,35 @@
+{
+  "chapter_en": "THE WORKFLOW",
+  "chapter_zh": "从拍摄到发布",
+  "accent": "blue",
+  "layout": "fixed-left",
+  "duration": 8,
+  "source_word_ids": ["word-000001", "word-000040"],
+  "states": [
+    {
+      "id": "state-001",
+      "action": "enter",
+      "type": "thesis",
+      "fidelity_mode": "spoken-first",
+      "relation_layout": "single-point",
+      "layout_reason": "原话在此先建立一个核心命题",
+      "card_size": "medium",
+      "content_structure": "core-idea",
+      "size_reason": "标题加解释构成完整核心观点，使用默认中卡",
+      "reveal_at": 0.2,
+      "title": "剪辑自动化",
+      "body": "原片进入 成片交付",
+      "items": [
+        {"id": "item-001", "text": "识别口述", "reveal_at": 2.4},
+        {"id": "item-002", "text": "清理停顿", "reveal_at": 3.6},
+        {"id": "item-003", "text": "生成动画", "reveal_at": 5.1}
+      ]
+    },
+    {
+      "id": "hold-001",
+      "action": "hold",
+      "reveal_at": 6,
+      "reason": "保持当前结构让观众完成阅读"
+    }
+  ]
+}

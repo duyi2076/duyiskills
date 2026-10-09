@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "default_style": "dark-reference-fixed",
+  "confidence_threshold": 0,
+  "fixed_animation_layout": "reference-fixed-left",
+  "fixed_animation_panel_mode": "content-panel",
+  "auto_profiles": {
+    "knowledge_explainer": {"style_id": "dark-reference-fixed"},
+    "personal_story": {"style_id": "dark-reference-fixed"},
+    "structured_tutorial": {"style_id": "dark-reference-fixed"},
+    "reflective_commentary": {"style_id": "dark-reference-fixed"},
+    "conflicting_or_uncertain": {
+      "style_id": "dark-reference-fixed",
+      "always_fallback": true
+    }
+  }
+}

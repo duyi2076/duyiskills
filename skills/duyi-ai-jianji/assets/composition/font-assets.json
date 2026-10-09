@@ -1,0 +1,46 @@
+{
+  "version": 3,
+  "fallback_policy": "blocked",
+  "fonts": [
+    {
+      "id": "noto-cjk-black",
+      "path": "assets/composition/fonts/NotoSansCJKsc-Black.otf",
+      "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4",
+      "family": "Noto Sans CJK SC",
+      "face": "Noto Sans CJK SC Black",
+      "role": ["speech_caption"]
+    },
+    {
+      "id": "noto-cjk-bold",
+      "path": "assets/composition/fonts/NotoSansCJKsc-Bold.otf",
+      "sha256": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+      "family": "Noto Sans CJK SC",
+      "face": "Noto Sans CJK SC Bold",
+      "role": ["animation_zh_primary"]
+    },
+    {
+      "id": "noto-cjk-regular",
+      "path": "assets/composition/fonts/NotoSansCJKsc-Regular.otf",
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "family": "Noto Sans CJK SC",
+      "face": "Noto Sans CJK SC",
+      "role": ["animation_zh_secondary"]
+    },
+    {
+      "id": "noto-cjk-medium",
+      "path": "assets/composition/fonts/NotoSansCJKsc-Medium.otf",
+      "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7",
+      "family": "Noto Sans CJK SC",
+      "face": "Noto Sans CJK SC Medium",
+      "role": ["animation_zh_list"]
+    },
+    {
+      "id": "space-mono-bold",
+      "path": "assets/composition/fonts/SpaceMono-Bold.ttf",
+      "sha256": "405e73d41afb7e5906efce206a326af5c956f38e255f35421c260e861e599c59",
+      "family": "Space Mono",
+      "face": "Space Mono Bold",
+      "role": ["chapter_en", "number"]
+    }
+  ]
+}

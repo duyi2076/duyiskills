@@ -1,0 +1,4 @@
+interface:
+  display_name: "杜一 AI 剪辑"
+  short_description: "一次确认锁定删改、完整句与字幕断句，再自动精剪并生成逐层动画"
+  default_prompt: "Use $duyi-ai-jianji to prepare one complete human-review packet, lock the confirmed editorial master, then automatically edit this horizontal talking-head video with clean speech, sentence-faithful captions, and exact-timed layered animation."
