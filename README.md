@@ -12,6 +12,7 @@
 | [杜一朋友圈（duyi-pyq）](skills/duyi-pyq/SKILL.md) | 把真实事项、口述或草稿整理成可复制的朋友圈，保留口吻与细节 | [README](skills/duyi-pyq/README.md) |
 | [杜一口播润色（duyi-koubo-runse）](skills/duyi-koubo-runse/SKILL.md) | 检查口播衔接、重复、指代、节奏和画面同步，交付原位标记稿 | [README](skills/duyi-koubo-runse/README.md) |
 | [杜一内容诊断（duyi-neirong-zhenduan）](skills/duyi-neirong-zhenduan/SKILL.md) | 按十项内容标准检查用户价值、亲历支撑、承诺和推理，给出具体改法 | [README](skills/duyi-neirong-zhenduan/README.md) |
+| [杜一账号定位（duyi-zhanghao-dingwei）](skills/duyi-zhanghao-dingwei/SKILL.md) | 逐轮访谈确定个人账号方向，交付定位总览、内容主线与昵称简介；默认聊天交付，可按需保存 | [README](skills/duyi-zhanghao-dingwei/README.md) |
 
 ## 获取与安装
 
@@ -77,6 +78,14 @@ skills/
     agents/
     references/
     LICENSE
+  duyi-zhanghao-dingwei/
+    README.md
+    SKILL.md
+    agents/
+    scripts/
+    references/
+    templates/
+    LICENSE
 ```
 
 ## 收录与更新
@@ -93,4 +102,4 @@ skills/
 
 杜一 AI 剪辑的原创代码采用 PolyForm Noncommercial 1.0.0，文档和设计材料采用 CC BY-NC 4.0；字体、GSAP 与 Silero 模型保留各自许可，见[许可与第三方说明](skills/duyi-ai-jianji/THIRD_PARTY_NOTICES.md)。
 
-杜一朋友圈、杜一口播润色与杜一内容诊断的原创文档采用 MIT License，各目录保留独立许可。朋友圈参考方法的权利和上游声明见[第三方说明](skills/duyi-pyq/THIRD_PARTY_NOTICES.md)。
+杜一朋友圈、杜一口播润色、杜一内容诊断与杜一账号定位的原创文档采用 MIT License，各目录保留独立许可。朋友圈参考方法的权利和上游声明见[第三方说明](skills/duyi-pyq/THIRD_PARTY_NOTICES.md)。
