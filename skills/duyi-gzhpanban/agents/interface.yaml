@@ -1,0 +1,24 @@
+interface:
+  display_name: "duyi-gzhpanban"
+  short_description: "统领排版、配图、质检，并按请求生成复制稿或草稿。"
+  default_prompt: "Use $duyi-gzhpanban to format this finished WeChat article. Default to a copy-ready HTML delivery with numbered image placeholders and a separate image-copy page; never submit copy placeholders to the API, and create an API draft with real image references only when the user explicitly asks to upload it."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "claude"
+    - "openai"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    claude: "neutral-source-plus-adapter"
+    openai: "metadata-adapter"
+    generic: "neutral-source"

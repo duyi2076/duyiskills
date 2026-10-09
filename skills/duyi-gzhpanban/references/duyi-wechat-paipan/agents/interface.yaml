@@ -1,0 +1,24 @@
+interface:
+  display_name: "公众号排版"
+  short_description: "公众号手机端排版与预览，主动选择重点和强调块，使用 15 套固定样式生成微信内联 HTML。"
+  default_prompt: "Use $duyi-wechat-paipan to format this article for WeChat mobile reading."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "claude"
+    - "openai"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    claude: "neutral-source-plus-adapter"
+    openai: "metadata-adapter"
+    generic: "neutral-source"

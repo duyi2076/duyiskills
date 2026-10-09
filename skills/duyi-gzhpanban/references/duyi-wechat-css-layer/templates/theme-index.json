@@ -1,0 +1,204 @@
+{
+  "default": "minimal",
+  "preview": [
+    "minimal",
+    "medium",
+    "stripe",
+    "wired",
+    "ft",
+    "course"
+  ],
+  "css_authority": "styles.md",
+  "themes": [
+    {
+      "id": "minimal",
+      "name": "极简黑白",
+      "group": "推荐默认",
+      "bestFor": "默认款、深度文章、方法论、诊断报告",
+      "aliases": [
+        "默认",
+        "极简",
+        "干净",
+        "黑白",
+        "商业方法论",
+        "诊断报告"
+      ]
+    },
+    {
+      "id": "medium",
+      "name": "Medium Essay",
+      "group": "经典媒体",
+      "bestFor": "个人观点、深度长文、方法论文章",
+      "aliases": [
+        "Medium",
+        "长文",
+        "随笔",
+        "个人观点"
+      ]
+    },
+    {
+      "id": "wired",
+      "name": "WIRED Feature",
+      "group": "经典媒体",
+      "bestFor": "AI、科技观点、产品发布、前沿趋势",
+      "aliases": [
+        "WIRED",
+        "科技",
+        "AI",
+        "前沿",
+        "产品发布",
+        "有冲击力"
+      ]
+    },
+    {
+      "id": "verge",
+      "name": "The Verge Briefing",
+      "group": "经典媒体",
+      "bestFor": "热点解读、产品更新、资讯评论",
+      "aliases": [
+        "The Verge",
+        "Verge",
+        "年轻",
+        "热点",
+        "资讯评论"
+      ]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe Docs",
+      "group": "科技产品",
+      "bestFor": "教程、工具说明、Agent 工作流文档",
+      "aliases": [
+        "Stripe",
+        "文档",
+        "工具说明",
+        "教程",
+        "操作指南",
+        "产品文档"
+      ]
+    },
+    {
+      "id": "apple",
+      "name": "Apple Newsroom",
+      "group": "经典媒体",
+      "bestFor": "正式公告、产品介绍、品牌文章",
+      "aliases": [
+        "Apple",
+        "正式公告",
+        "品牌稿",
+        "产品介绍"
+      ]
+    },
+    {
+      "id": "ft",
+      "name": "FT Analysis",
+      "group": "经典媒体",
+      "bestFor": "商业分析、市场判断、对标研究",
+      "aliases": [
+        "FT",
+        "财经",
+        "商业分析",
+        "市场判断",
+        "对标研究"
+      ]
+    },
+    {
+      "id": "linear",
+      "name": "Linear Changelog",
+      "group": "科技产品",
+      "bestFor": "版本公告、功能更新、路线图说明",
+      "aliases": [
+        "Linear",
+        "changelog",
+        "版本更新",
+        "更新日志",
+        "路线图"
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub README",
+      "group": "科技产品",
+      "bestFor": "安装说明、工具介绍、技术文档",
+      "aliases": [
+        "GitHub",
+        "README",
+        "开源",
+        "安装说明"
+      ]
+    },
+    {
+      "id": "notion",
+      "name": "Notion Memo",
+      "group": "科技产品",
+      "bestFor": "学习笔记、内部总结、项目复盘",
+      "aliases": [
+        "Notion",
+        "备忘录",
+        "内部总结",
+        "项目复盘"
+      ]
+    },
+    {
+      "id": "magazine",
+      "name": "Magazine Feature",
+      "group": "内容出版",
+      "bestFor": "人物稿、品牌故事、深度专题",
+      "aliases": [
+        "杂志",
+        "人物稿",
+        "品牌故事",
+        "专题"
+      ]
+    },
+    {
+      "id": "editorial",
+      "name": "Editorial Column",
+      "group": "内容出版",
+      "bestFor": "创作者手记、观点随笔、复盘札记",
+      "aliases": [
+        "专栏",
+        "手记",
+        "创作者随笔",
+        "复盘札记"
+      ]
+    },
+    {
+      "id": "newspaper",
+      "name": "Newspaper Report",
+      "group": "内容出版",
+      "bestFor": "调查稿、商业报道、严肃分析",
+      "aliases": [
+        "报纸",
+        "报道",
+        "调查",
+        "严肃分析"
+      ]
+    },
+    {
+      "id": "course",
+      "name": "课程讲义",
+      "group": "中文公众号",
+      "bestFor": "课程、教程、学习笔记、操作说明",
+      "aliases": [
+        "课程",
+        "学习笔记",
+        "讲义",
+        "教程"
+      ]
+    },
+    {
+      "id": "event",
+      "name": "活动公告",
+      "group": "中文公众号",
+      "bestFor": "活动通知、招募、发布公告、转化文",
+      "aliases": [
+        "活动",
+        "招募",
+        "转化",
+        "通知",
+        "公告"
+      ]
+    }
+  ]
+}

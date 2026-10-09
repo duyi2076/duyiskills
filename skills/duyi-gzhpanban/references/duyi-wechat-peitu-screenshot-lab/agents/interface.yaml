@@ -1,0 +1,26 @@
+interface:
+  display_name: "公众号截图配图"
+  short_description: "生成公众号封面、小黑插图与截图证据图，并检查交付质量。"
+  default_prompt: "Use $duyi-wechat-peitu-screenshot-lab to generate WeChat cover, Xiaohei illustrations, and screenshot evidence cards."
+policy:
+  allow_implicit_invocation: false
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "claude"
+    - "openai"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    claude: "neutral-source-plus-adapter"
+    openai: "metadata-adapter"
+    generic: "neutral-source"

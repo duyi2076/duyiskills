@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+.wechat-article-suite/
+*.log
+*.tmp
+*.temp
+output/
+build/
+dist/
+coverage/

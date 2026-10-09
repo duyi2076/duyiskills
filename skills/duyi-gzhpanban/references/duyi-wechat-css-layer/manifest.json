@@ -1,0 +1,19 @@
+{
+  "name": "duyi-wechat-css-layer",
+  "version": "0.3.0",
+  "description": "杜一公众号固定风格层：从唯一权威 styles.md 读取 15 套固定 style id，并与排版 renderer 联动生成 WeChat-ready HTML。",
+  "entry": "SKILL.md",
+  "templates": [
+    "templates/styles.md",
+    "templates/theme-index.json"
+  ],
+  "scripts": [
+    "scripts/render_style_set.sh",
+    "scripts/render_style_set.py"
+  ],
+  "integrates_with": [
+    "duyi-gzhpanban",
+    "duyi-wechat-paipan",
+    "duyi-wechat-fabu"
+  ]
+}

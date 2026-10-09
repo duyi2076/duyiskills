@@ -1,0 +1,14 @@
+{
+  "name": "duyi-gzhpanban",
+  "version": "1.3.2",
+  "owner": "duyi",
+  "updated_at": "2026-10-09",
+  "review_cadence": "quarterly",
+  "review_due": "2027-01-09",
+  "status": "active",
+  "maturity_tier": "production",
+  "lifecycle_stage": "active",
+  "context_budget_tier": "production",
+  "target_platforms": ["claude", "openai", "generic"],
+  "factory_components": []
+}

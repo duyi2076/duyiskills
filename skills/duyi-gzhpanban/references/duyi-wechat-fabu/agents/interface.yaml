@@ -1,0 +1,24 @@
+interface:
+  display_name: "公众号发布"
+  short_description: "创建微信公众号草稿与手机预览，不自动群发。"
+  default_prompt: "Use $duyi-wechat-fabu to create a WeChat draft after dry-run and checks pass."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "claude"
+    - "openai"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    claude: "neutral-source-plus-adapter"
+    openai: "metadata-adapter"
+    generic: "neutral-source"

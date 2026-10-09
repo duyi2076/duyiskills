@@ -1,0 +1,5 @@
+Markdown==3.10.2
+cssutils==2.11.1
+beautifulsoup4==4.14.3
+PyYAML==6.0.3
+Pillow==12.1.1

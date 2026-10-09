@@ -1,0 +1,22 @@
+{
+  "name": "duyi-wechat-peitu-screenshot-lab",
+  "version": "0.1.1",
+  "owner": "duyi",
+  "updated_at": "2026-10-09",
+  "review_cadence": "quarterly",
+  "review_due": "2027-01-09",
+  "status": "experimental",
+  "maturity_tier": "lab",
+  "lifecycle_stage": "iteration",
+  "context_budget_tier": "lab",
+  "target_platforms": [
+    "claude",
+    "openai",
+    "generic"
+  ],
+  "factory_components": [
+    "references",
+    "scripts",
+    "assets"
+  ]
+}

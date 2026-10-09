@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "{ARTICLE_TITLE}",
+    "style": "duyi-editorial-illustration",
+    "footer": "2026"
+  },
+  "cards": [
+    {
+      "name": "wechat-hero-21x9",
+      "format": "wide",
+      "role": "hero",
+      "title": "{SHORT_TITLE}",
+      "subtitle": "{OPTIONAL_EN_SUBTITLE}",
+      "issue": "",
+      "seal": false,
+      "image": {
+        "src": "assets/{RAW_HERO_SCENE_IMAGE_WITHOUT_TEXT}",
+        "position": "center 50%"
+      }
+    },
+    {
+      "name": "wechat-cover-1x1",
+      "format": "square",
+      "role": "cover",
+      "title": "{SHORT_TITLE}",
+      "subtitle": "{ONE_SENTENCE_THESIS}",
+      "issue": "",
+      "seal": false,
+      "image": {
+        "src": "assets/{RAW_SQUARE_SCENE_IMAGE_WITHOUT_TEXT}",
+        "position": "center 55%"
+      }
+    },
+    {
+      "name": "article-inline-01",
+      "format": "inline",
+      "role": "inline",
+      "title": "{INLINE_TITLE}",
+      "labels": ["{SHORT_LABEL_1}", "{SHORT_LABEL_2}", "{SHORT_LABEL_3}"],
+      "issue": "",
+      "seal": false,
+      "image": {
+        "src": "assets/{RAW_INLINE_SCENE_IMAGE_WITHOUT_TEXT}",
+        "position": "center 50%"
+      }
+    }
+  ]
+}
