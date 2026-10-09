@@ -1,0 +1,6 @@
+interface:
+  display_name: "杜一抖音拆解"
+  short_description: "公开核心版：把抖音视频证据整理成可核验的深度拆解与 HTML 报告"
+  default_prompt: "Use $duyi-douyin-chaijie to collect evidence and produce a deep, reusable Douyin video breakdown with a local HTML report."
+policy:
+  allow_implicit_invocation: false

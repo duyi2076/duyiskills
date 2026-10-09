@@ -7,6 +7,7 @@
 | Skill | 解决什么问题 | 安装与使用 |
 |---|---|---|
 | [duyi-gzhpanban](skills/duyi-gzhpanban/SKILL.md) | 将已写好的公众号文章排成手机可读的 HTML，提供 15 套样式、重点与配图；默认交付复制稿，明确要求时上传草稿箱 | [README](skills/duyi-gzhpanban/README.md) |
+| [杜一抖音拆解（duyi-douyin-chaijie）](skills/duyi-douyin-chaijie/SKILL.md) | 将公开抖音视频整理为可回查的页面、转写和关键帧证据，拆解开篇、论证、营销与评论，输出 Markdown 和 HTML 报告 | [README](skills/duyi-douyin-chaijie/README.md) |
 
 ## 获取与安装
 
@@ -32,6 +33,16 @@ skills/
     SKILL.md
     references/
     THIRD_PARTY_NOTICES.md
+  duyi-douyin-chaijie/
+    README.md
+    SKILL.md
+    references/
+    scripts/
+    tests/
+    LICENSE
+    NOTICE.md
+    SECURITY.md
+    THIRD_PARTY_NOTICES.md
 ```
 
 ## 收录与更新
@@ -43,3 +54,5 @@ skills/
 ## 许可
 
 各 Skill 和第三方组件按自己的许可执行。查看对应目录的许可文件和第三方说明；本仓库没有统一的 MIT 声明。公众号 Skill 的 15 套样式包含 CC BY-NC 4.0 的非商业用途限制，范围见[许可说明](skills/duyi-gzhpanban/THIRD_PARTY_NOTICES.md)。
+
+杜一抖音拆解采用 CC BY-NC 4.0，署名、非商业用途和第三方依赖范围见[许可与来源说明](skills/duyi-douyin-chaijie/NOTICE.md)。
