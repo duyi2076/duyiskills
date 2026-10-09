@@ -9,6 +9,9 @@
 | [duyi-gzhpanban](skills/duyi-gzhpanban/SKILL.md) | 将已写好的公众号文章排成手机可读的 HTML，提供 15 套样式、重点与配图；默认交付复制稿，明确要求时上传草稿箱 | [README](skills/duyi-gzhpanban/README.md) |
 | [杜一抖音拆解（duyi-douyin-chaijie）](skills/duyi-douyin-chaijie/SKILL.md) | 将公开抖音视频整理为可回查的页面、转写和关键帧证据，拆解开篇、论证、营销与评论，输出 Markdown 和 HTML 报告 | [README](skills/duyi-douyin-chaijie/README.md) |
 | [杜一 AI 剪辑（duyi-ai-jianji）](skills/duyi-ai-jianji/SKILL.md) | 将中文横屏口播经一次文字确认后精剪，生成原话字幕、固定左上语义动画和可复查成片；默认深色，可明确选择白墙融合 | [README](skills/duyi-ai-jianji/README.md) |
+| [杜一朋友圈（duyi-pyq）](skills/duyi-pyq/SKILL.md) | 把真实事项、口述或草稿整理成可复制的朋友圈，保留口吻与细节 | [README](skills/duyi-pyq/README.md) |
+| [杜一口播润色（duyi-koubo-runse）](skills/duyi-koubo-runse/SKILL.md) | 检查口播衔接、重复、指代、节奏和画面同步，交付原位标记稿 | [README](skills/duyi-koubo-runse/README.md) |
+| [杜一内容诊断（duyi-neirong-zhenduan）](skills/duyi-neirong-zhenduan/SKILL.md) | 按十项内容标准检查用户价值、亲历支撑、承诺和推理，给出具体改法 | [README](skills/duyi-neirong-zhenduan/README.md) |
 
 ## 获取与安装
 
@@ -56,6 +59,24 @@ skills/
     LICENSE
     NOTICE.md
     THIRD_PARTY_NOTICES.md
+  duyi-pyq/
+    README.md
+    SKILL.md
+    prompt.md
+    references/
+    LICENSE
+    THIRD_PARTY_NOTICES.md
+  duyi-koubo-runse/
+    README.md
+    SKILL.md
+    agents/
+    LICENSE
+  duyi-neirong-zhenduan/
+    README.md
+    SKILL.md
+    agents/
+    references/
+    LICENSE
 ```
 
 ## 收录与更新
@@ -71,3 +92,5 @@ skills/
 杜一抖音拆解采用 CC BY-NC 4.0，署名、非商业用途和第三方依赖范围见[许可与来源说明](skills/duyi-douyin-chaijie/NOTICE.md)。
 
 杜一 AI 剪辑的原创代码采用 PolyForm Noncommercial 1.0.0，文档和设计材料采用 CC BY-NC 4.0；字体、GSAP 与 Silero 模型保留各自许可，见[许可与第三方说明](skills/duyi-ai-jianji/THIRD_PARTY_NOTICES.md)。
+
+杜一朋友圈、杜一口播润色与杜一内容诊断的原创文档采用 MIT License，各目录保留独立许可。朋友圈参考方法的权利和上游声明见[第三方说明](skills/duyi-pyq/THIRD_PARTY_NOTICES.md)。

@@ -1,0 +1,4 @@
+interface:
+  display_name: "杜一内容诊断"
+  short_description: "按个人哲学逐项检查用户困境、简单方法、亲身经历、承诺兑现与产品试用价值"
+  default_prompt: "使用 $duyi-neirong-zhenduan，按完整个人标准诊断这份内容，逐项给出判断、原文依据和具体修改建议。"

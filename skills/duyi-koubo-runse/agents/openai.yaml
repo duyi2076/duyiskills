@@ -1,0 +1,4 @@
+interface:
+  display_name: "杜一口播润色"
+  short_description: "检查中文口播承接、重复功能、指代、说话节奏与画面同步，给出具体修改建议"
+  default_prompt: "使用 $duyi-koubo-runse 润色这份口播稿，保留事实、观点和口吻，先给五项检查表，再给完整原位标记稿和改动清单。"
