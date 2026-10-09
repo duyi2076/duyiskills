@@ -1,0 +1,4 @@
+interface:
+  display_name: "杜一日记整理"
+  short_description: "整理日记中的事项、判断与行动，诚实记录待办状态并保留完整原文"
+  default_prompt: "使用 $duyi-riji-zhengli，整理我提供的日记，保留口吻、任务状态和完整原文，默认在聊天里交付。"

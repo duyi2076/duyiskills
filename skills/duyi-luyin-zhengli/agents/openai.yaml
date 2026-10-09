@@ -1,0 +1,4 @@
+interface:
+  display_name: "杜一录音整理"
+  short_description: "把现成转写和对话整理为完整主题稿、来源定位与待确认候选清单"
+  default_prompt: "使用 $duyi-luyin-zhengli，完整阅读我指定的转写或对话原文，整理主题主线、来源定位和候选清单，保留角色归属、原判断强度、后续修正与未回答问题，默认在聊天中交付。"

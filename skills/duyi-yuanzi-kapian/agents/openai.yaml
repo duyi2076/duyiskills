@@ -1,0 +1,4 @@
+interface:
+  display_name: "杜一原子卡片"
+  short_description: "忠实整理访谈答疑，保留角色、判断变化、来源定位和未回答问题"
+  default_prompt: "使用 $duyi-yuanzi-kapian，完整阅读指定材料并按具体问题整理原子卡片，保留角色、原回答、追问补充和来源，默认不加入延伸分析。"
