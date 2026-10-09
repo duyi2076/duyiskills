@@ -6,7 +6,7 @@
 
 | Skill | 解决什么问题 | 安装与使用 |
 |---|---|---|
-| [duyi-gzhpanban](skills/duyi-gzhpanban/SKILL.md) | 将已写好的公众号文章排成手机可读的 HTML，提供 15 套样式、重点与配图；默认交付复制稿，明确要求时上传草稿箱 | [README](skills/duyi-gzhpanban/README.md) |
+| [杜一公众号排版（duyi-gzhpanban）](skills/duyi-gzhpanban/SKILL.md) | 将已写好的公众号文章排成手机可读的 HTML，提供 15 套样式、重点与配图；默认交付复制稿，明确要求时上传草稿箱 | [README](skills/duyi-gzhpanban/README.md) |
 | [杜一抖音拆解（duyi-douyin-chaijie）](skills/duyi-douyin-chaijie/SKILL.md) | 将公开抖音视频整理为可回查的页面、转写和关键帧证据，拆解开篇、论证、营销与评论，输出 Markdown 和 HTML 报告 | [README](skills/duyi-douyin-chaijie/README.md) |
 | [杜一 AI 剪辑（duyi-ai-jianji）](skills/duyi-ai-jianji/SKILL.md) | 将中文横屏口播经一次文字确认后精剪，生成原话字幕、固定左上语义动画和可复查成片；默认深色，可明确选择白墙融合 | [README](skills/duyi-ai-jianji/README.md) |
 | [杜一朋友圈（duyi-pyq）](skills/duyi-pyq/SKILL.md) | 把真实事项、口述或草稿整理成可复制的朋友圈，保留口吻与细节 | [README](skills/duyi-pyq/README.md) |
