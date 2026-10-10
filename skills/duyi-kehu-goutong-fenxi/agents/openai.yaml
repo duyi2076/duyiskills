@@ -1,0 +1,4 @@
+interface:
+  display_name: "产品客户沟通分析"
+  short_description: "拆解客户原话、角色、证据缺口与多种解释，给出需求澄清和沟通建议"
+  default_prompt: "请使用 $duyi-kehu-goutong-fenxi 分析这段沟通：先区分事实与解释，再说明角色、情境、前台后台，提出多种有依据的解释和沟通建议。不要读心或把动机当成事实。"

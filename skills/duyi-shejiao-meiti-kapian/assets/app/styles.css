@@ -1,0 +1,571 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f4f5f7;
+  --panel: #ffffff;
+  --line: #e6e8ec;
+  --text: #16181c;
+  --muted: #6b7280;
+  --accent: #16181c;
+  --radius: 14px;
+  font-size: 15px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 22px; background: var(--panel); border-bottom: 1px solid var(--line);
+}
+.brand-lockup { display: flex; align-items: center; gap: 12px; }
+.brand-avatar { width: 40px; height: 40px; border-radius: 10px; }
+.eyebrow { font-size: 11px; letter-spacing: 0.12em; color: var(--muted); font-weight: 600; }
+.topbar h1 { font-size: 18px; }
+.status-pill {
+  font-size: 12px; color: var(--muted); border: 1px solid var(--line);
+  padding: 6px 12px; border-radius: 999px; background: var(--bg);
+}
+
+.workspace {
+  flex: 1; display: grid; grid-template-columns: 400px 1fr; gap: 0; min-height: 0;
+}
+
+/* ---------- 左侧控制面板 ---------- */
+.control-panel {
+  border-right: 1px solid var(--line); background: var(--panel);
+  overflow-y: auto; height: calc(100vh - 69px); padding: 18px;
+  display: flex; flex-direction: column; gap: 22px;
+}
+.control-section { display: flex; flex-direction: column; gap: 12px; }
+.section-heading { display: flex; gap: 10px; align-items: baseline; }
+.section-heading span { font-size: 12px; font-weight: 700; color: #b3b8c2; }
+.section-heading h2 { font-size: 15px; }
+.section-heading h2 em { font-style: normal; color: var(--muted); font-weight: 500; font-size: 12px; }
+.section-heading p { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.hidden { display: none !important; }
+
+.segmented { display: flex; background: var(--bg); border-radius: 10px; padding: 3px; gap: 3px; }
+.segmented button {
+  flex: 1; border: 0; background: transparent; padding: 8px 10px; border-radius: 8px;
+  font-size: 13px; color: var(--muted); cursor: pointer; font-family: inherit;
+}
+.segmented button.active { background: var(--accent); color: #fff; font-weight: 600; }
+.segmented.small button { padding: 6px 8px; font-size: 12px; }
+
+.search-row { display: flex; gap: 8px; }
+#search {
+  flex: 1; border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px;
+  font-size: 13px; font-family: inherit; outline: none; background: var(--bg);
+}
+#search:focus { border-color: #9aa2b1; background: #fff; }
+.icon-button {
+  border: 1px solid var(--line); background: var(--panel); border-radius: 10px;
+  width: 38px; cursor: pointer; font-size: 15px;
+}
+.icon-button:hover { background: var(--bg); }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.mini-label { font-size: 12px; color: var(--muted); }
+.mini-note { font-style: normal; font-size: 11px; color: #9aa2b1; }
+.fit-hint {
+  font-size: 11.5px; line-height: 1.5; color: #b4552f;
+  background: #fff5ef; border: 1px solid #f4dcce; border-radius: 8px; padding: 7px 10px;
+}
+.chip {
+  border: 1px solid var(--line); background: var(--panel); color: var(--text);
+  border-radius: 999px; padding: 5px 11px; font-size: 12px; cursor: pointer; font-family: inherit;
+}
+.chip em { font-style: normal; color: var(--muted); margin-left: 4px; font-size: 11px; }
+.chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.chip.active em { color: #cfd3da; }
+
+.post-list {
+  list-style: none; display: flex; flex-direction: column; gap: 8px;
+  max-height: 430px; overflow-y: auto; padding-right: 2px;
+}
+.post-item {
+  border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+  cursor: pointer; background: var(--panel);
+}
+.post-item:hover { border-color: #b6bcc8; }
+.post-item.active { border-color: var(--accent); background: #f7f7f8; }
+.post-item .pi-meta { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+.post-item .pi-text {
+  font-size: 13px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; overflow: hidden;
+}
+.list-more { font-size: 12px; color: var(--muted); text-align: center; padding: 6px; }
+
+#custom-text {
+  border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-size: 14px;
+  line-height: 1.6; font-family: inherit; resize: vertical; outline: none; background: var(--bg);
+}
+#custom-text:focus { border-color: #9aa2b1; background: #fff; }
+
+.option-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.option { display: flex; flex-direction: column; gap: 6px; }
+.option.full { grid-column: 1 / -1; }
+input[type="range"] { width: 100%; accent-color: var(--accent); }
+input[type="range"]:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.bg-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.bg-thumb {
+  aspect-ratio: 3/4; border-radius: 8px; overflow: hidden; cursor: pointer;
+  border: 2px solid transparent; padding: 0; background: var(--bg);
+}
+.bg-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bg-thumb.active { border-color: var(--accent); }
+.bg-import { display: flex; gap: 8px; }
+.profile-row { display: flex; align-items: center; gap: 10px; }
+.profile-avatar { width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); }
+.text-input {
+  border: 1px solid var(--line); border-radius: 10px; padding: 8px 11px;
+  font-size: 13px; font-family: inherit; outline: none; background: var(--bg); width: 100%;
+}
+.text-input:focus { border-color: #9aa2b1; background: #fff; }
+.agent-prompt { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; line-height: 1.55; resize: vertical; }
+.file-chip { display: inline-flex; align-items: center; }
+#bg-url {
+  flex: 1; border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px;
+  font-size: 12px; font-family: inherit; outline: none;
+}
+
+/* ---------- 右侧预览 ---------- */
+.preview-panel { display: flex; flex-direction: column; min-width: 0; height: calc(100vh - 69px); }
+.preview-topbar {
+  display: flex; align-items: center; gap: 10px; padding: 12px 22px;
+  border-bottom: 1px solid var(--line); background: var(--panel); font-size: 13px;
+  flex-wrap: wrap;
+}
+.preview-topbar .dot { width: 8px; height: 8px; border-radius: 50%; background: #f43f5e; }
+.preview-actions { margin-left: auto; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.preview-actions a { color: var(--muted); text-decoration: none; font-size: 12px; }
+.preview-actions a:hover { color: var(--text); }
+.ghost-btn {
+  border: 1px solid var(--line); background: var(--panel); border-radius: 8px;
+  padding: 7px 12px; font-size: 12px; cursor: pointer; font-family: inherit;
+  white-space: nowrap;
+}
+.ghost-btn:hover { background: var(--bg); }
+.ghost-btn.active { border-color: #fe2c55; color: #fe2c55; }
+.primary-btn {
+  border: 0; background: var(--accent); color: #fff; border-radius: 8px;
+  padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;
+  white-space: nowrap;
+}
+.primary-btn:hover { opacity: 0.88; }
+.primary-btn:disabled { opacity: 0.5; cursor: wait; }
+
+.stage-wrap {
+  flex: 1; overflow: auto; display: flex; align-items: center; justify-content: center;
+  padding: 28px;
+  background:
+    repeating-conic-gradient(#eceef1 0% 25%, #f8f9fa 0% 50%) 0 0 / 24px 24px;
+}
+
+/* 导出目标节点：固定 540x720（导出 pixelRatio=2 → 1080x1440） */
+.stage {
+  position: relative; width: 540px; height: 720px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; box-shadow: 0 18px 50px rgba(15, 20, 32, 0.28);
+}
+.stage-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* 9:16 竖图（1080×1920，预览 1/2 缩放） */
+.stage.tall { height: 960px; }
+
+/* 抖音安全区参考线：四条线的位置由 app.js 的 SAFE 常量注入（唯一真源），这里只管长相。
+   顶部状态栏/导航、右侧互动按钮列、底部文案/音乐/评论、左侧边距 */
+.safe-guides { position: absolute; inset: 0; pointer-events: none; z-index: 5; }
+.safe-guides.hidden { display: none; }
+.sg-line { position: absolute; }
+.sg-top    { left: 0; right: 0; border-top: 1.5px dashed rgba(254, 44, 85, 0.85); }
+.sg-right  { top: 0; bottom: 0; border-right: 1.5px dashed rgba(254, 44, 85, 0.85); }
+.sg-bottom { left: 0; right: 0; border-bottom: 1.5px dashed rgba(254, 44, 85, 0.85); }
+.sg-left   { top: 0; bottom: 0; border-left: 1.5px dashed rgba(254, 44, 85, 0.6); }
+.sg-label {
+  position: absolute; font-size: 10px; line-height: 1; padding: 3px 6px;
+  border-radius: 4px; background: rgba(254, 44, 85, 0.85); color: #fff; white-space: nowrap;
+}
+.sg-label-right { top: 50%; transform: translateY(-50%) rotate(90deg); transform-origin: right center; }
+
+/* 抖音右侧互动栏模拟（仅 9:16 预览，不进导出）。right/bottom 由 app.js 按 SAFE 注入，
+   尺寸按 1080 宽画布的一半（预览 1/2 缩放）取值 */
+.tt-rail {
+  position: absolute; z-index: 6; pointer-events: none;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  width: 48px; color: #fff;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.55));
+}
+.tt-rail.hidden { display: none; }
+.ttr-avatar { position: relative; width: 48px; height: 48px; margin-bottom: 8px; }
+.ttr-avatar img {
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 1.5px solid #fff; object-fit: cover; display: block;
+}
+.ttr-plus {
+  position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%);
+  width: 17px; height: 17px; border-radius: 50%; background: #fe2c55;
+  font-size: 13px; line-height: 15px; text-align: center; font-weight: 600;
+}
+.ttr-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.ttr-item svg { width: 32px; height: 32px; fill: #fff; display: block; }
+.ttr-item b { font-size: 11px; font-weight: 600; letter-spacing: 0.02em; }
+
+.stage.card-only { height: auto; min-height: 0; box-shadow: none; overflow: visible; }
+.stage.card-only .stage-bg { display: none; }
+.stage.card-only .tweet-card { box-shadow: 0 18px 50px rgba(15, 20, 32, 0.28); }
+
+/* 竖图模式下卡片浮动：left/top 由 JS 按安全区算好后写在行内 */
+.stage .tweet-card.floating {
+  position: absolute;
+  cursor: grab; touch-action: none;
+}
+.stage .tweet-card.floating:active { cursor: grabbing; }
+.stage .tweet-card.floating.dragging { user-select: none; }
+
+.drag-hint { font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+/* ---------- 推文卡片 ---------- */
+.tweet-card {
+  position: relative; width: 84%; background: #fff; color: #0f1419;
+  border-radius: 0; padding: 22px 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+/* 竖图模式下宽度锁定安全区宽度（由 JS 按 SAFE 写在行内），84% 只是无 JS 时的兜底 */
+.tc-head { display: flex; align-items: center; gap: 11px; }
+.tc-avatar { width: 44px; height: 44px; border-radius: 50%; }
+.tc-id { flex: 1; min-width: 0; }
+.tc-name { font-weight: 700; font-size: 15.5px; display: flex; align-items: center; gap: 4px; }
+.tc-badge { width: 17px; height: 17px; }
+.tc-handle { color: #536471; font-size: 13.5px; margin-top: 1px; }
+.tc-x-brand { display: flex; align-items: center; align-self: flex-start; color: #0f1419; }
+.tc-x-logo { width: 20px; height: 20px; }
+
+/* 字号/行距由 layoutCard() 行内写入（自动收进安全区或用户手选），这里是无 JS 时的默认值 */
+.tc-body {
+  margin-top: 14px; font-size: 17px; line-height: 1.62;
+  white-space: pre-wrap; word-break: break-word;
+}
+.tc-body .tc-link { color: #1d9bf0; }
+
+.tc-metrics {
+  margin-top: 16px; padding-top: 12px; border-top: 1px solid #eff3f4;
+  display: flex; gap: 18px; color: #536471; font-size: 12.5px;
+}
+.tc-metrics span { display: inline-flex; align-items: center; gap: 5px; }
+.tc-metrics svg { width: 15px; height: 15px; fill: currentColor; }
+.tc-metrics b { color: #0f1419; font-weight: 600; }
+.tc-metrics.hidden { display: none; }
+.tc-metrics[data-sample="true"] { flex-wrap: wrap; }
+.tc-metrics[data-sample="true"]::before { content: "示例互动数据"; flex-basis: 100%; font-size: 10px; opacity: 0.8; }
+
+/* ---------- 多平台卡片 ---------- */
+.platform-picker { display: flex; width: 100%; }
+.platform-picker button { min-width: 0; white-space: nowrap; }
+.platform-fields { display: grid; gap: 8px; }
+.platform-fields label { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.platform-fields input { min-width: 0; }
+
+/* 小卡片共用收缩规则：metrics 内容可换行，文本不会撑破外框。 */
+.tweet-card[data-platform]:not([data-platform="x"]) { min-width: 0; overflow: hidden; }
+.tweet-card[data-platform]:not([data-platform="x"]) .tc-body { min-width: 0; overflow-wrap: anywhere; }
+.tweet-card[data-platform]:not([data-platform="x"]) .tc-metrics { min-width: 0; flex-wrap: wrap; gap: 8px 16px; }
+.tweet-card[data-platform]:not([data-platform="x"]) .tc-metrics span { min-width: 0; white-space: nowrap; }
+.tc-platform-brand { display: none; align-items: center; align-self: flex-start; font-weight: 700; white-space: nowrap; }
+.tc-weibo-badge { display: inline-flex; align-items: center; justify-content: center; width: 17px; height: 17px; border-radius: 50%; background: #ff8200; color: #fff; font-size: 10px; font-weight: 800; line-height: 1; }
+.tc-question { display: none; }
+.tc-platform-meta { display: none; align-items: center; justify-content: space-between; gap: 8px; color: #9399a1; font-size: 11.5px; line-height: 1.35; }
+.tc-platform-meta .tc-moments-more {
+  margin-left: auto; padding: 3px 7px; border-radius: 4px;
+  background: #f0f2f5; color: #576b95; font-size: 15px; line-height: 0.8;
+  letter-spacing: 1px;
+}
+
+/* 朋友圈：头像单独占左列，内容和互动在右侧纵向排列。 */
+.tweet-card[data-platform="moments"] {
+  display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 11px;
+  row-gap: 0; padding: 20px 22px; background: #fff; color: #1f2329;
+}
+.tweet-card[data-platform="moments"] .tc-head { display: contents; }
+.tweet-card[data-platform="moments"] .tc-avatar { grid-column: 1; grid-row: 1 / span 2; width: 44px; height: 44px; border-radius: 6px; }
+.tweet-card[data-platform="moments"] .tc-id { grid-column: 2; grid-row: 1; align-self: start; }
+.tweet-card[data-platform="moments"] .tc-name { color: #576b95; font-size: 15px; }
+.tweet-card[data-platform="moments"] .tc-handle,
+.tweet-card[data-platform="moments"] .tc-x-brand { display: none; }
+.tweet-card[data-platform="moments"] .tc-body { grid-column: 2; margin-top: 12px; font-size: 15px; line-height: 1.62; }
+.tweet-card[data-platform="moments"] .tc-platform-meta { grid-column: 2; display: flex; margin-top: 12px; }
+.tweet-card[data-platform="moments"] .tc-metrics { grid-column: 2; margin-top: 10px; padding-top: 9px; border-top: 0; color: #576b95; gap: 8px 18px; }
+.tweet-card[data-platform="moments"] .tc-metrics .metric-reposts,
+.tweet-card[data-platform="moments"] .tc-metrics .metric-bookmarks,
+.tweet-card[data-platform="moments"] .tc-metrics .metric-share,
+.tweet-card[data-platform="moments"] .tc-metrics .metric-vote { display: none; }
+.tweet-card[data-platform="moments"] .tc-metrics .metric-likes:not(.hidden),
+.tweet-card[data-platform="moments"] .tc-metrics .metric-replies:not(.hidden) { display: inline-flex; }
+.tweet-card[data-platform="moments"] .tc-metrics b { color: #576b95; }
+
+/* 微博：橙色圆头像、昵称和来源信息，底部三等分互动栏。 */
+.tweet-card[data-platform="weibo"] { padding: 20px 22px; border-radius: 2px; }
+.tweet-card[data-platform="weibo"] .tc-avatar { width: 42px; height: 42px; border-radius: 50%; }
+.tweet-card[data-platform="weibo"] .tc-name { color: #ff8200; font-size: 15px; }
+.tweet-card[data-platform="weibo"] .tc-handle { color: #9399a1; font-size: 11.5px; }
+.tweet-card[data-platform="weibo"] .tc-x-brand { display: none; }
+.tweet-card[data-platform="weibo"] .tc-platform-brand { display: flex; color: #ff8200; font-size: 12px; }
+.tweet-card[data-platform="weibo"] .tc-weibo-badge { margin-left: 2px; }
+.tweet-card[data-platform="weibo"] .tc-body { margin-top: 13px; font-size: 15px; line-height: 1.62; }
+.tweet-card[data-platform="weibo"] .tc-platform-meta { display: flex; justify-content: flex-start; margin-top: 9px; }
+.tweet-card[data-platform="weibo"] .tc-metrics { justify-content: space-around; margin-top: 12px; padding-top: 10px; gap: 4px; color: #9399a1; }
+.tweet-card[data-platform="weibo"] .tc-metrics > span { flex: 1 1 30%; justify-content: center; }
+.tweet-card[data-platform="weibo"] .tc-metrics .metric-bookmarks,
+.tweet-card[data-platform="weibo"] .tc-metrics .metric-share,
+.tweet-card[data-platform="weibo"] .tc-metrics .metric-vote { display: none; }
+.tweet-card[data-platform="weibo"] .tc-metrics .metric-reposts:not(.hidden),
+.tweet-card[data-platform="weibo"] .tc-metrics .metric-replies:not(.hidden),
+.tweet-card[data-platform="weibo"] .tc-metrics .metric-likes:not(.hidden) { display: inline-flex; }
+
+/* 知乎：问题标题在头部上方，互动项使用知乎蓝。 */
+.tweet-card[data-platform="zhihu"] { padding: 20px 22px; border-radius: 4px; }
+.tweet-card[data-platform="zhihu"] .tc-question:not(.hidden) { display: block; margin-bottom: 15px; color: #1f2329; font-size: 17px; line-height: 1.45; font-weight: 700; overflow-wrap: anywhere; }
+.tweet-card[data-platform="zhihu"] .tc-avatar { width: 42px; height: 42px; border-radius: 50%; }
+.tweet-card[data-platform="zhihu"] .tc-name { color: #1f2329; font-size: 15px; }
+.tweet-card[data-platform="zhihu"] .tc-handle { display: none; }
+.tweet-card[data-platform="zhihu"] .tc-x-brand { display: none; }
+.tweet-card[data-platform="zhihu"] .tc-platform-brand { display: flex; color: #0084ff; font-size: 12px; }
+.tweet-card[data-platform="zhihu"] .tc-body { margin-top: 13px; font-size: 15px; line-height: 1.68; }
+.tweet-card[data-platform="zhihu"] .tc-platform-meta { display: flex; justify-content: flex-start; margin-top: 10px; }
+.tweet-card[data-platform="zhihu"] .tc-metrics { margin-top: 12px; padding-top: 10px; border-top-color: #f0f2f5; gap: 8px 14px; color: #8590a6; }
+.tweet-card[data-platform="zhihu"] .tc-metrics .metric-reposts { display: none; }
+.tweet-card[data-platform="zhihu"] .tc-metrics .metric-vote:not(.hidden) { display: inline-flex; padding: 5px 10px; border-radius: 4px; background: #e6f3ff; color: #0084ff; font-weight: 600; }
+.tweet-card[data-platform="zhihu"] .tc-metrics .metric-vote b { color: #0084ff; }
+.tweet-card[data-platform="zhihu"] .tc-metrics .metric-replies:not(.hidden),
+.tweet-card[data-platform="zhihu"] .tc-metrics .metric-bookmarks:not(.hidden),
+.tweet-card[data-platform="zhihu"] .tc-metrics .metric-share:not(.hidden) { display: inline-flex; }
+
+@media (max-width: 360px) {
+  .tweet-card[data-platform="weibo"],
+  .tweet-card[data-platform="zhihu"] { padding-left: 14px; padding-right: 14px; }
+}
+
+/* 黑色主题卡片 */
+.tweet-card.dark { background: #000; color: #e7e9ea; }
+.tweet-card.dark .tc-handle { color: #71767b; }
+.tweet-card.dark .tc-x-brand { color: #e7e9ea; }
+.tweet-card.dark .tc-metrics { border-top-color: #2f3336; color: #71767b; }
+.tweet-card.dark .tc-metrics b { color: #e7e9ea; }
+
+/* 深色平台卡片：覆盖平台规则中更高优先级的浅色文字和底色。 */
+.tweet-card.dark[data-platform="moments"] {
+  background: #111; color: #e7e9ea; border: 1px solid #2f3336;
+}
+.tweet-card.dark[data-platform="moments"] .tc-name,
+.tweet-card.dark[data-platform="moments"] .tc-metrics,
+.tweet-card.dark[data-platform="moments"] .tc-metrics b { color: #8ab4f8; }
+.tweet-card.dark[data-platform="moments"] .tc-body { color: #e7e9ea; }
+.tweet-card.dark[data-platform="moments"] .tc-platform-meta { color: #8b949e; }
+.tweet-card.dark[data-platform="moments"] .tc-moments-more { background: #2f3336; color: #8ab4f8; }
+.tweet-card.dark[data-platform="weibo"] {
+  background: #111; color: #e7e9ea; border: 1px solid #2f3336;
+}
+.tweet-card.dark[data-platform="weibo"] .tc-body { color: #e7e9ea; }
+.tweet-card.dark[data-platform="weibo"] .tc-platform-meta,
+.tweet-card.dark[data-platform="weibo"] .tc-metrics { color: #9aa2ad; }
+.tweet-card.dark[data-platform="zhihu"] {
+  background: #101214; color: #e7e9ea; border: 1px solid #2f3336;
+}
+.tweet-card.dark[data-platform="zhihu"] .tc-question,
+.tweet-card.dark[data-platform="zhihu"] .tc-name,
+.tweet-card.dark[data-platform="zhihu"] .tc-body { color: #e7e9ea; }
+.tweet-card.dark[data-platform="zhihu"] .tc-platform-meta,
+.tweet-card.dark[data-platform="zhihu"] .tc-metrics { color: #9aa2ad; }
+.tweet-card.dark[data-platform="zhihu"] .tc-metrics { border-top-color: #2f3336; }
+
+@media (max-width: 980px) {
+  .workspace { grid-template-columns: 1fr; }
+  .control-panel { height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+  .preview-panel { height: auto; }
+}
+
+/* embed=1：无界面渲染模式，供 Agent / 自动化截图或读取 window.__cardDataUrl */
+body.embed { background: transparent; }
+body.embed > *:not(#embed-view) { display: none !important; }
+#embed-view { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+#embed-view img { max-width: 100%; max-height: 100%; display: block; }
+
+/* 导出交付面板（移动端）：iOS 对程序化下载常静默拦截，改走分享/长按保存 */
+.export-sheet { position: fixed; inset: 0; background: rgba(15, 20, 32, 0.6); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 1rem; }
+.es-panel { background: var(--panel); border-radius: var(--radius); padding: 1rem; max-width: 420px; width: 100%; display: flex; flex-direction: column; gap: 0.75rem; }
+.es-preview { background: repeating-conic-gradient(#eceef1 0% 25%, #f8f9fa 0% 50%) 0 0 / 20px 20px; border-radius: 8px; overflow: hidden; display: flex; justify-content: center; }
+.es-preview img, .es-preview video { max-width: 100%; max-height: 55vh; display: block; }
+.es-hint { font-size: 12px; color: var(--muted); text-align: center; }
+.es-actions { display: flex; gap: 8px; justify-content: center; }
+
+/* ---------- 朋友圈详情内容区 ----------
+   按参考图保留内容区本身，不添加手机状态栏或详情页导航。 */
+.tweet-card[data-platform="moments"] {
+  display: grid;
+  grid-template-columns: 45px minmax(0, 1fr);
+  column-gap: 12px;
+  row-gap: 0;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding: 14px;
+  background: #fff;
+  color: #171717;
+}
+.tweet-card[data-platform="moments"] .tc-head { display: contents; }
+.tweet-card[data-platform="moments"] .tc-avatar {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.tweet-card[data-platform="moments"] .tc-id {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  min-width: 0;
+}
+.tweet-card[data-platform="moments"] .tc-name {
+  min-width: 0;
+  overflow: hidden;
+  color: #576b95;
+  font-size: 18px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tweet-card[data-platform="moments"] .tc-handle,
+.tweet-card[data-platform="moments"] .tc-x-brand { display: none; }
+.tweet-card[data-platform="moments"] .tc-body {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+}
+.tweet-card[data-platform="moments"] .tc-platform-meta {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+  color: #b2b2b2;
+  font-size: 14px;
+  line-height: 1.35;
+}
+.tweet-card[data-platform="moments"] .tc-moments-date {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
+  color: #b2b2b2;
+}
+.tweet-card[data-platform="moments"] .tc-moments-date span { color: #b2b2b2; }
+.tweet-card[data-platform="moments"] .tc-moments-delete {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  color: #576b95;
+}
+.tweet-card[data-platform="moments"] .tc-moments-delete svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+.tweet-card[data-platform="moments"] .tc-platform-meta .tc-moments-more {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: 5px 9px;
+  border-radius: 4px;
+  background: #f7f7f7;
+  color: #737373;
+  font-size: 15px;
+  line-height: 0.75;
+}
+.tweet-card[data-platform="moments"] .tc-metrics {
+  grid-column: 1 / -1;
+  grid-row: 4;
+  display: flex;
+  min-width: 0;
+  min-height: 60px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #f7f7f7;
+  color: #576b95;
+}
+.tweet-card[data-platform="moments"] .tc-metrics > .metric-reposts,
+.tweet-card[data-platform="moments"] .tc-metrics > .metric-replies,
+.tweet-card[data-platform="moments"] .tc-metrics > .metric-likes,
+.tweet-card[data-platform="moments"] .tc-metrics > .metric-bookmarks,
+.tweet-card[data-platform="moments"] .tc-metrics > .metric-share,
+.tweet-card[data-platform="moments"] .tc-metrics > .metric-vote { display: none; }
+.tweet-card[data-platform="moments"] .moments-heart {
+  display: inline-flex;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  color: #576b95;
+}
+.tweet-card[data-platform="moments"] .moments-heart svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+.tweet-card[data-platform="moments"] .moments-likers {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tweet-card[data-platform="moments"] .moments-likers img {
+  display: block;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+/* 详情内容区的深色模式，保持日期和互动弱文字有足够对比度。 */
+.tweet-card.dark[data-platform="moments"] {
+  background: #111;
+  color: #e7e9ea;
+  border: 1px solid #2f3336;
+}
+.tweet-card.dark[data-platform="moments"] .tc-body { color: #e7e9ea; }
+.tweet-card.dark[data-platform="moments"] .tc-platform-meta,
+.tweet-card.dark[data-platform="moments"] .tc-moments-date,
+.tweet-card.dark[data-platform="moments"] .tc-moments-date span { color: #9aa2ad; }
+.tweet-card.dark[data-platform="moments"] .tc-moments-more,
+.tweet-card.dark[data-platform="moments"] .tc-moments-delete,
+.tweet-card.dark[data-platform="moments"] .moments-heart { color: #8ab4f8; }
+.tweet-card.dark[data-platform="moments"] .tc-moments-more,
+.tweet-card.dark[data-platform="moments"] .tc-metrics { background: #202428; }
+
+.platform-fields .moments-people-toggle { display:flex; flex-direction:row; align-items:center; gap:8px; }
+.moments-people-toggle input { width:auto; }
+.tweet-card[data-platform="moments"] .moments-heart { width:20px; height:20px; flex:0 0 20px; }

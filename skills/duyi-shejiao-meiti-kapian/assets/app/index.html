@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>杜一社交媒体卡片</title>
+<link rel="icon" href="avatar-placeholder.svg" />
+<link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+<main class="app-shell">
+  <header class="topbar">
+    <div class="brand-lockup">
+      <img class="brand-avatar" id="brand-avatar" src="avatar-placeholder.svg" alt="" />
+      <div>
+        <p class="eyebrow" id="brand-eyebrow">杜一社交媒体卡片</p>
+        <h1>杜一社交媒体卡片</h1>
+      </div>
+    </div>
+    <div class="status-pill">把表达做成卡片。</div>
+  </header>
+
+  <div class="workspace">
+    <aside class="control-panel">
+
+      <section class="control-section" id="custom-section">
+        <div class="section-heading"><span>01</span><div><h2>写文案</h2><p>支持换行，会实时上卡</p></div></div>
+        <textarea id="custom-text" rows="10" placeholder="写点什么……"></textarea>
+      </section>
+
+      <section class="control-section">
+        <div class="section-heading"><span>02</span><div><h2>样式</h2><p>成品形态与卡片外观</p></div></div>
+        <div class="mini-label">平台样式</div>
+        <div class="segmented platform-picker" role="group" aria-label="平台样式">
+          <button id="platform-x" class="active" aria-pressed="true">推特</button>
+          <button id="platform-moments" aria-pressed="false">朋友圈</button>
+          <button id="platform-weibo" aria-pressed="false">微博</button>
+          <button id="platform-zhihu" aria-pressed="false">知乎</button>
+        </div>
+        <div id="zhihu-fields" class="platform-fields hidden">
+          <label for="zhihu-question">问题标题（可选）</label>
+          <input id="zhihu-question" type="text" maxlength="180" placeholder="填写这段回答对应的问题" />
+        </div>
+        <div id="moments-fields" class="platform-fields hidden">
+          <label for="moments-datetime">发布时间</label>
+          <input id="moments-datetime" type="datetime-local" />
+          <label class="moments-people-toggle"><input id="moments-show-people" type="checkbox" /> 显示点赞人头像</label>
+          <label for="moments-likes-upload">点赞头像（可选，最多 24 张）</label>
+          <input id="moments-likes-upload" type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple />
+          <div class="mini-note" id="moments-likes-status">上传头像后显示点赞区</div>
+          <button id="moments-likes-clear" type="button">清空点赞头像</button>
+        </div>
+        <div class="mini-label">图片尺寸</div>
+        <div class="segmented">
+          <button id="mode-poster" class="active">3:4 竖图</button>
+          <button id="mode-tall">9:16 竖图</button>
+          <button id="mode-card">纯卡片</button>
+        </div>
+        <div class="option-grid">
+          <div class="option">
+            <span class="mini-label">卡片主题</span>
+            <div class="segmented small">
+              <button id="theme-light" class="active">白色</button>
+              <button id="theme-dark">黑色</button>
+            </div>
+          </div>
+          <div class="option">
+            <span class="mini-label" id="metrics-label">互动数据（随机）</span>
+            <div class="segmented small">
+              <button id="metrics-on" class="active">显示</button>
+              <button id="metrics-off">隐藏</button>
+            </div>
+          </div>
+          <div class="option full">
+            <span class="mini-label">卡片宽度 <em id="width-val"></em>　<i class="mini-note">100% = 安全区满宽；纯卡片模式固定宽度</i></span>
+            <input id="card-width" type="range" min="50" max="100" value="100" />
+          </div>
+          <div class="option">
+            <span class="mini-label">正文字号</span>
+            <div class="segmented small">
+              <button id="font-auto" class="active">自动</button>
+              <button id="font-manual">手动</button>
+            </div>
+          </div>
+          <div class="option">
+            <span class="mini-label">字号 <em id="font-val"></em>　<i class="mini-note">自动适配画框；手动保留字号</i></span>
+            <input id="card-font" type="range" min="20" max="48" step="1" value="34" />
+          </div>
+          <div class="option full">
+            <span class="mini-label">卡片透明度 <em id="opacity-val"></em></span>
+            <input id="card-opacity" type="range" min="30" max="100" value="100" />
+          </div>
+          <p class="option full fit-hint hidden" id="fit-hint"></p>
+        </div>
+      </section>
+
+      <section class="control-section" id="bg-section">
+        <div class="section-heading"><span>03</span><div><h2>背景</h2><p>内置渐变，也可上传图片或贴 URL</p></div></div>
+        <div class="bg-grid" id="bg-grid"></div>
+        <div class="bg-import">
+          <label class="chip file-chip">上传图片<input id="bg-upload" type="file" accept="image/*" hidden /></label>
+          <input id="bg-url" type="url" placeholder="或粘贴图片 URL 后回车" />
+        </div>
+      </section>
+
+      <section class="control-section">
+        <div class="section-heading"><span>04</span><div><h2>账号信息</h2><p>换成你自己的身份，只保存在本机浏览器</p></div></div>
+        <div class="profile-row">
+          <img class="profile-avatar" id="profile-avatar-preview" src="avatar-placeholder.svg" alt="" />
+          <label class="chip file-chip">上传头像<input id="avatar-upload" type="file" accept="image/*" hidden /></label>
+        </div>
+        <div class="option-grid">
+          <div class="option">
+            <span class="mini-label">名称</span>
+            <input class="text-input" id="profile-name" placeholder="你的名字" />
+          </div>
+          <div class="option">
+            <span class="mini-label">用户名（不带 @）</span>
+            <input class="text-input" id="profile-handle" placeholder="yourname" />
+          </div>
+          <div class="option full">
+            <span class="mini-label">认证徽章</span>
+            <div class="segmented small">
+              <button id="badge-on">蓝 V</button>
+              <button id="badge-off">无</button>
+            </div>
+          </div>
+        </div>
+        <div class="chip-row">
+          <button class="chip" id="profile-reset">恢复默认</button>
+        </div>
+      </section>
+
+
+
+
+
+    </aside>
+
+    <section class="preview-panel">
+      <div class="preview-topbar">
+        <span class="dot"></span><strong id="preview-label">3:4 竖图 · 1080×1440</strong>
+        <span class="drag-hint" id="drag-hint">拖动卡片调整位置（可出框，出框裁切）· 双击回安全区中心</span>
+        <div class="preview-actions">
+          <button id="guides-toggle" class="ghost-btn active">安全区 ✓</button>
+          <button id="shuffle-metrics" class="ghost-btn">换一组数据</button>
+          <button id="copy-text" class="ghost-btn">复制文案</button>
+          <button id="copy-link" class="ghost-btn" title="复制包含当前文案和样式设置的链接">复制链接</button>
+          <button id="live-btn" class="ghost-btn" title="导出 3 秒动效 MP4，手机端用 intoLive/快捷指令转成实况照片">导出 Live 图</button>
+          <button id="export-btn" class="primary-btn">下载 PNG</button>
+        </div>
+      </div>
+
+      <div class="stage-wrap">
+        <div class="stage" id="stage">
+          <img class="stage-bg" id="stage-bg" alt="" />
+          <!-- 抖音安全区参考线：仅预览显示，导出时自动排除 -->
+          <div class="safe-guides" id="safe-guides">
+            <div class="sg-line sg-top"></div>
+            <div class="sg-line sg-right"></div>
+            <div class="sg-line sg-bottom"></div>
+            <div class="sg-line sg-left"></div>
+            <span class="sg-label sg-label-top">状态栏 / 顶部导航</span>
+            <span class="sg-label sg-label-right">互动按钮</span>
+            <span class="sg-label sg-label-bottom">文案标题 / 音乐 / 评论</span>
+          </div>
+          <!-- 9:16 下模拟抖音右侧互动栏，帮你确认卡片右边会被哪些图标压住。
+               只是预览参照，和参考线一样不会进导出成品 -->
+          <div class="tt-rail hidden" id="tt-rail">
+            <div class="ttr-avatar">
+              <img id="ttr-avatar-img" alt="" />
+              <span class="ttr-plus">+</span>
+            </div>
+            <div class="ttr-item">
+              <svg viewBox="0 0 24 24"><path d="M12 21.6l-1.5-1.35C5.4 15.63 2 12.55 2 8.78 2 5.7 4.42 3.3 7.5 3.3c1.74 0 3.41.8 4.5 2.07 1.09-1.27 2.76-2.07 4.5-2.07 3.08 0 5.5 2.4 5.5 5.48 0 3.77-3.4 6.85-8.5 11.48L12 21.6z"/></svg>
+              <b id="ttr-likes"></b>
+            </div>
+            <div class="ttr-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2.4c5.52 0 10 3.62 10 8.09 0 4.47-4.48 8.09-10 8.09-.98 0-1.93-.11-2.82-.33l-4.9 2.6a.5.5 0 01-.73-.53l.78-3.86C2.9 14.98 2 13.03 2 10.49 2 6.02 6.48 2.4 12 2.4z"/></svg>
+              <b id="ttr-replies"></b>
+            </div>
+            <div class="ttr-item">
+              <svg viewBox="0 0 24 24"><path d="M5 3.6c0-.88.72-1.6 1.6-1.6h10.8c.88 0 1.6.72 1.6 1.6v18.05l-7-4.99-7 4.99V3.6z"/></svg>
+              <b id="ttr-bookmarks"></b>
+            </div>
+            <div class="ttr-item">
+              <svg viewBox="0 0 24 24"><path d="M13.2 3.4l8.4 7.5a1.2 1.2 0 010 1.8l-8.4 7.5c-.78.7-2.02.14-2.02-.9v-3.5c-4.06.12-6.9 1.28-8.68 3.52-.5.63-1.5.2-1.4-.6C1.9 12.6 5.3 8.9 11.18 8.3V4.3c0-1.04 1.24-1.6 2.02-.9z"/></svg>
+              <b id="ttr-reposts"></b>
+            </div>
+          </div>
+          <div class="tweet-card" id="tweet-card" data-platform="x">
+            <div class="tc-question hidden" id="tc-question"></div>
+            <div class="tc-head">
+              <img class="tc-avatar" id="tc-avatar" src="avatar-placeholder.svg" alt="" />
+              <div class="tc-id">
+                <div class="tc-name"><span id="tc-name-text"></span>
+                  <span class="tc-weibo-badge hidden" id="tc-weibo-badge">V</span>
+                  <svg class="tc-badge" id="tc-badge" viewBox="0 0 22 22"><path fill="#1d9bf0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/></svg>
+                </div>
+                <div class="tc-handle"><span id="tc-handle-text"></span><span id="tc-handle-separator"> · </span><span id="tc-date"></span></div>
+              </div>
+              <span class="tc-platform-brand" id="tc-platform-brand"></span>
+              <span class="tc-x-brand"><svg class="tc-x-logo" viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+            </div>
+            <div class="tc-body" id="tc-body"></div>
+            <div class="tc-platform-meta hidden" id="tc-platform-meta"></div>
+            <div class="tc-metrics" id="tc-metrics"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="vendor/html-to-image.js"></script>
+<script src="vendor/mp4-muxer.js"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

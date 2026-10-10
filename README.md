@@ -16,6 +16,8 @@
 | [杜一录音整理（duyi-luyin-zhengli）](skills/duyi-luyin-zhengli/SKILL.md) | 将现成转写或对话原文整理成完整主题稿与候选清单，保留角色归属、追问修正和真实出处 | [README](skills/duyi-luyin-zhengli/README.md) |
 | [杜一原子卡片（duyi-yuanzi-kapian）](skills/duyi-yuanzi-kapian/SKILL.md) | 将访谈、答疑和课程记录按独立问题拆卡，忠实保留原回答、判断过程与未回答部分 | [README](skills/duyi-yuanzi-kapian/README.md) |
 | [杜一日记整理（duyi-riji-zhengli）](skills/duyi-riji-zhengli/SKILL.md) | 将日记或口述转写按主题整理，核对任务状态与已有下一步，并完整保留输入原文 | [README](skills/duyi-riji-zhengli/README.md) |
+| [产品客户沟通分析（duyi-kehu-goutong-fenxi）](skills/duyi-kehu-goutong-fenxi/SKILL.md) | 根据客户原话、行为与场景分析角色、可能顾虑和证据缺口，帮助澄清需求、异议与合作预期 | [README](skills/duyi-kehu-goutong-fenxi/README.md) |
+| [杜一社交媒体卡片（duyi-shejiao-meiti-kapian）](skills/duyi-shejiao-meiti-kapian/SKILL.md) | 将现成文字做成朋友圈、X、微博或知乎样式的本地图片卡片，支持竖图、纯卡片 PNG 和可选动效素材 | [README](skills/duyi-shejiao-meiti-kapian/README.md) |
 
 ## 获取与安装
 
@@ -107,6 +109,21 @@ skills/
     agents/
     references/
     LICENSE
+  duyi-kehu-goutong-fenxi/
+    README.md
+    SKILL.md
+    agents/
+    references/
+    LICENSE
+    NOTICE
+  duyi-shejiao-meiti-kapian/
+    README.md
+    SKILL.md
+    agents/
+    references/
+    assets/app/
+    LICENSE
+    THIRD_PARTY_NOTICES.md
 ```
 
 ## 收录与更新
@@ -124,3 +141,5 @@ skills/
 杜一 AI 剪辑的原创代码采用 PolyForm Noncommercial 1.0.0，文档和设计材料采用 CC BY-NC 4.0；字体、GSAP 与 Silero 模型保留各自许可，见[许可与第三方说明](skills/duyi-ai-jianji/THIRD_PARTY_NOTICES.md)。
 
 杜一朋友圈、杜一口播润色、杜一内容诊断、杜一账号定位、杜一录音整理、杜一原子卡片与杜一日记整理的原创文档采用 MIT License，各目录保留独立许可。朋友圈参考方法的权利和上游声明见[第三方说明](skills/duyi-pyq/THIRD_PARTY_NOTICES.md)。
+
+产品客户沟通分析采用 MIT License，理论与材料来源见[来源说明](skills/duyi-kehu-goutong-fenxi/NOTICE)。杜一社交媒体卡片的代码和自生成渐变素材采用 MIT License，上游及导出组件保留原版权声明；用户输入的头像、文字和图片保留各自权利，见[第三方说明](skills/duyi-shejiao-meiti-kapian/THIRD_PARTY_NOTICES.md)。

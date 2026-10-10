@@ -126,6 +126,10 @@ Claude Code 的入口是 `~/.claude/skills/`，Hermes 的入口是 `~/.hermes/sk
 保留了讲课、录音、转写、检查补漏和未统计时间的信息，按操作顺序分段，统一了 AI 工具名与 PPT 的空格排版。
 ```
 
+## 项目来源
+
+本 Skill 的独立项目为 [duyi2076/duyi-moments](https://github.com/duyi2076/duyi-moments)。在本合集中的名称为「杜一朋友圈」，调用标识为 `duyi-pyq`。
+
 ## 文件与许可
 
 - [SKILL.md](SKILL.md)：主流程与输出要求。

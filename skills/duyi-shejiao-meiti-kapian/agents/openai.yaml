@@ -1,0 +1,6 @@
+interface:
+  display_name: "杜一社交媒体卡片"
+  short_description: "将已有文字制成朋友圈、X、微博或知乎风格的本地卡片并导出图片"
+  default_prompt: "使用 $duyi-shejiao-meiti-kapian，保持这段原文，按我指定的平台、身份和尺寸制卡，交付可读取的 PNG 图片。"
+policy:
+  allow_implicit_invocation: true
