@@ -13,6 +13,7 @@
 | [杜一口播润色（duyi-koubo-runse）](skills/duyi-koubo-runse/SKILL.md) | 检查口播衔接、重复、指代、节奏和画面同步，交付原位标记稿 | [README](skills/duyi-koubo-runse/README.md) |
 | [杜一内容诊断（duyi-neirong-zhenduan）](skills/duyi-neirong-zhenduan/SKILL.md) | 按十项内容标准检查用户价值、亲历支撑、承诺和推理，给出具体改法 | [README](skills/duyi-neirong-zhenduan/README.md) |
 | [杜一账号定位（duyi-zhanghao-dingwei）](skills/duyi-zhanghao-dingwei/SKILL.md) | 逐轮访谈确定个人账号方向，交付定位总览、内容主线与昵称简介；默认聊天交付，可按需保存 | [README](skills/duyi-zhanghao-dingwei/README.md) |
+| [杜一账号包装（duyi-account-packaging）](skills/duyi-account-packaging/SKILL.md) | 基于已有事实和定位制作账号昵称与主页简介，逐版审核个人特点、关注理由和可信线索，并实际核对字符容量 | [README](skills/duyi-account-packaging/README.md) |
 | [杜一录音整理（duyi-luyin-zhengli）](skills/duyi-luyin-zhengli/SKILL.md) | 将现成转写或对话原文整理成完整主题稿与候选清单，保留角色归属、追问修正和真实出处 | [README](skills/duyi-luyin-zhengli/README.md) |
 | [杜一原子卡片（duyi-yuanzi-kapian）](skills/duyi-yuanzi-kapian/SKILL.md) | 将访谈、答疑和课程记录按独立问题拆卡，忠实保留原回答、判断过程与未回答部分 | [README](skills/duyi-yuanzi-kapian/README.md) |
 | [杜一日记整理（duyi-riji-zhengli）](skills/duyi-riji-zhengli/SKILL.md) | 将日记或口述转写按主题整理，核对任务状态与已有下一步，并完整保留输入原文 | [README](skills/duyi-riji-zhengli/README.md) |
@@ -83,6 +84,13 @@ skills/
     agents/
     references/
     LICENSE
+  duyi-account-packaging/
+    README.md
+    SKILL.md
+    agents/
+    scripts/
+    references/
+    LICENSE
   duyi-zhanghao-dingwei/
     README.md
     SKILL.md
@@ -143,3 +151,5 @@ skills/
 杜一朋友圈、杜一口播润色、杜一内容诊断、杜一账号定位、杜一录音整理、杜一原子卡片与杜一日记整理的原创文档采用 MIT License，各目录保留独立许可。朋友圈参考方法的权利和上游声明见[第三方说明](skills/duyi-pyq/THIRD_PARTY_NOTICES.md)。
 
 产品客户沟通分析采用 MIT License，理论与材料来源见[来源说明](skills/duyi-kehu-goutong-fenxi/NOTICE)。杜一社交媒体卡片的代码和自生成渐变素材采用 MIT License，上游及导出组件保留原版权声明；用户输入的头像、文字和图片保留各自权利，见[第三方说明](skills/duyi-shejiao-meiti-kapian/THIRD_PARTY_NOTICES.md)。
+
+杜一账号包装的原创文档和计数工具采用 MIT License，见[许可文件](skills/duyi-account-packaging/LICENSE)。

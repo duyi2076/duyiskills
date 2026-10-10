@@ -1,0 +1,4 @@
+interface:
+  display_name: "杜一账号包装"
+  short_description: "基于已有定位制作账号昵称与简介，支持读者试读及多平台字数压缩"
+  default_prompt: "使用 $duyi-account-packaging，根据我的真实经历和定位，制作账号昵称与简介并适配指定平台。"
