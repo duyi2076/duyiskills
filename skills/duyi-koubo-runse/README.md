@@ -8,6 +8,16 @@
 
 适合完整稿件或明确指定的片段。只有选题时先列缺少的正文，不凭空诊断。它不预测播放量、完播率或传播效果。
 
+## 使用案例
+
+杜一在口播工作流中配合使用本 Skill 与[杜一内容诊断](../duyi-neirong-zhenduan/README.md)，把语音口述整理为可录制稿件。下面是文章中展示的作品截图。
+
+| 小红书口播作品 | 抖音口播作品列表 |
+|---|---|
+| <img src="../../docs/examples/images/spoken-video-xiaohongshu.png" alt="杜一口播作品的小红书截图，显示 1.1 万点赞" width="228"> | <img src="../../docs/examples/images/spoken-videos-douyin.png" alt="杜一两条口播作品的抖音截图，分别显示 3963 和 6765 点赞" width="314"> |
+
+截图显示小红书作品 **1.1 万点赞**，抖音两条作品分别 **3963、6765 点赞**。这是两个 Skill 配合使用的案例，数据为截图时点。图片选自杜一 2026 年 10 月 10 日的公众号文章，见[案例说明](../../docs/examples/README.md)。
+
 ## 安装
 
 下载 [duyiskills](https://github.com/duyi2076/duyiskills)，或在终端获取：

@@ -2,6 +2,10 @@
 
 杜一个人 Skills 合集。每个 Skill 放在独立目录，README 说明解决什么问题、如何安装和使用，以及交付内容。
 
+![杜一自用的 13 个自媒体 Skill 公开分享文章封面](docs/examples/images/skill-workflow-cover.png)
+
+封面及下方使用案例选自杜一 2026 年 10 月 10 日的公众号文章。社交媒体卡片、口播润色、内容诊断、AI 剪辑和公众号排版的 README 已附对应图片，见[作者使用案例与图片说明](docs/examples/README.md)。
+
 ## 当前可用
 
 | Skill | 解决什么问题 | 安装与使用 |

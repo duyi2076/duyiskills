@@ -8,6 +8,16 @@
 
 十项标准覆盖用户代入、低行动成本、承诺吸引力、亲历经验、具体支撑、正文兑现、试用价值、概念推理、标题封面和形式适配。它采用作者明确的内容立场，不把这些立场宣称为所有体裁的普遍定律，也不预测流量或保证爆款。
 
+## 使用案例
+
+杜一在口播工作流中配合使用本 Skill 与[杜一口播润色](../duyi-koubo-runse/README.md)，把语音口述整理为可录制稿件。下面是文章中展示的作品截图。
+
+| 小红书口播作品 | 抖音口播作品列表 |
+|---|---|
+| <img src="../../docs/examples/images/spoken-video-xiaohongshu.png" alt="杜一口播作品的小红书截图，显示 1.1 万点赞" width="228"> | <img src="../../docs/examples/images/spoken-videos-douyin.png" alt="杜一两条口播作品的抖音截图，分别显示 3963 和 6765 点赞" width="314"> |
+
+截图显示小红书作品 **1.1 万点赞**，抖音两条作品分别 **3963、6765 点赞**。这是两个 Skill 配合使用的案例，数据为截图时点。图片选自杜一 2026 年 10 月 10 日的公众号文章，见[案例说明](../../docs/examples/README.md)。
+
 ## 安装
 
 下载 [duyiskills](https://github.com/duyi2076/duyiskills)，或在终端获取：
