@@ -1,0 +1,4 @@
+interface:
+  display_name: "个人使用说明指南"
+  short_description: "通过资料或访谈写个人说明书，挑选自用见面礼并写清取用方法，帮助新读者认识和连接你"
+  default_prompt: "使用 $duyi-personal-manual，根据我的资料或逐问访谈，做一份给新读者的个人说明书与自用资料指南，写清小礼物有什么、怎么取得和开始使用，以及怎样继续了解我。"

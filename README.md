@@ -6,7 +6,7 @@
 
 封面及下方使用案例选自杜一 2026 年 10 月 10 日的公众号文章。社交媒体卡片、口播润色、内容诊断、AI 剪辑和公众号排版的 README 已附对应图片，见[作者使用案例与图片说明](docs/examples/README.md)。
 
-## 13 个 Skill
+## 14 个 Skill
 
 | Skill | 解决什么问题 | 安装与使用 |
 |---|---|---|
@@ -23,6 +23,7 @@
 | [杜一日记整理（duyi-riji-zhengli）](skills/duyi-riji-zhengli/SKILL.md) | 将日记或口述转写按主题整理，核对任务状态与已有下一步，并完整保留输入原文 | [README](skills/duyi-riji-zhengli/README.md) |
 | [产品客户沟通分析（duyi-kehu-goutong-fenxi）](skills/duyi-kehu-goutong-fenxi/SKILL.md) | 根据客户原话、行为与场景分析角色、可能顾虑和证据缺口，帮助澄清需求、异议与合作预期 | [README](skills/duyi-kehu-goutong-fenxi/README.md) |
 | [杜一社交媒体卡片（duyi-shejiao-meiti-kapian）](skills/duyi-shejiao-meiti-kapian/SKILL.md) | 将现成文字做成朋友圈、X、微博或知乎样式的本地图片卡片，支持竖图、纯卡片 PNG 和可选动效素材 | [README](skills/duyi-shejiao-meiti-kapian/README.md) |
+| [个人使用说明指南（duyi-personal-manual）](skills/duyi-personal-manual/SKILL.md) | 根据资料或逐问访谈写个人说明书与自用资料指南，挑选见面礼并写清取用方法，帮助新读者认识和连接本人 | [README](skills/duyi-personal-manual/README.md) |
 
 ## 获取与安装
 
@@ -136,6 +137,12 @@ skills/
     assets/app/
     LICENSE
     THIRD_PARTY_NOTICES.md
+  duyi-personal-manual/
+    README.md
+    SKILL.md
+    agents/
+    references/
+    scripts/
 ```
 
 ## 收录与更新
